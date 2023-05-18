@@ -1,6 +1,5 @@
 package com.example.hrplatform.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -34,7 +33,6 @@ public class Account {
 
     @OneToOne()
     @JoinColumn(name = "resume_id", referencedColumnName = "id")
-    @JsonBackReference
     Resume resume;
 
 }
