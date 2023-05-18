@@ -11,26 +11,22 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Table(name = "Resume")
+@Table(name = "resume")
 public class Resume {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_sequence")
     @SequenceGenerator(name = "hibernate_sequence", sequenceName = "hibernate_sequence", allocationSize = 10)
     Long id;
 
+    Boolean car;
+
+    String description;
+
     String experience;
+
+    Integer hoursPerWeek;
 
     String lastWorkPlace;
 
     Integer salary;
-
-    Boolean car;
-
-    Integer hoursPerWeek;
-
-    String description;
-
-    @OneToOne(mappedBy = "resume")
-    @JsonManagedReference
-    Account account;
 }
