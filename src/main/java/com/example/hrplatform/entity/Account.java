@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.lang.Nullable;
-import org.springframework.security.core.userdetails.User;
 
 @Entity
 @Getter

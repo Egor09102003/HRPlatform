@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @ApiV1
 @RequiredArgsConstructor
@@ -35,7 +33,7 @@ public class AccountController {
     @GetMapping(value = "/accounts/id")
     public ModelAndView getAccountById(@RequestParam(name="id", required = false, defaultValue = "-1") Long id
             , Model model, @AuthenticationPrincipal User user) {
-        Account account = new Account();
+        Account account;
         if (id == -1 && user != null) {
             account = accountService.getAccountByUsername(user.getUsername());
         }
