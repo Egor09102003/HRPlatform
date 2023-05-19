@@ -3,6 +3,7 @@ package com.example.hrplatform.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.lang.Nullable;
 
 @Entity
 @Getter
@@ -17,6 +18,14 @@ public class Account {
     @SequenceGenerator(name = "hibernate_sequence", sequenceName = "hibernate_sequence", allocationSize = 10)
     Long id;
 
+    String username;
+
+    String password;
+
+    String role;
+
+    Boolean active;
+
     String surname;
 
     String name;
@@ -25,6 +34,7 @@ public class Account {
 
     String male;
 
+    @Nullable
     Integer age;
 
     String phone;

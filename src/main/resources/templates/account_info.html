@@ -5,6 +5,9 @@
     <title>Account Info</title>
 </head>
 <body>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
     <p th:text="'Имя: ' + ${name}">
     <p th:text="'Возраст: ' + ${age}">
     <p th:text="'Пол: ' + ${male}">

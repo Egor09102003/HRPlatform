@@ -25,4 +25,12 @@ public class AccountServiceImpl implements AccountService {
     public Optional<Account> getAccountById(Long id) {
         return accountRepository.findById(id);
     }
+
+    public Account getAccountByUsername(String username) {
+        return accountRepository.findAccountByUsername(username);
+    }
+
+    public void addNewAccount(Account account) {
+        accountRepository.save(account);
+    }
 }

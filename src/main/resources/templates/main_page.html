@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+  <h1>Welcome to my hr platform</h1>
+  <a href="/login">Go in your account</a>
+
+  <h1>Get current user info</h1>
+    <a th:href="@{/api/v1/accounts/id}">Get</a>
+</form>
+</body>
+</html>

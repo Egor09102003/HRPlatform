@@ -10,5 +10,7 @@ public interface AccountService {
 
     Optional<Account> getAccountById(Long id);
 
+    Account getAccountByUsername(String username);
 
+    void addNewAccount(Account account);
 }
